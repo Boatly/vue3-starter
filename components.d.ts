@@ -10,6 +10,7 @@ declare module 'vue' {
     AnonymousLayout: typeof import('./src/components/layouts/AnonymousLayout.vue')['default']
     AuthenticatedLayout: typeof import('./src/components/layouts/AuthenticatedLayout.vue')['default']
     Button: typeof import('primevue/button')['default']
+    Divider: typeof import('primevue/divider')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     IconCommunity: typeof import('./src/components/icons/IconCommunity.vue')['default']
     IconDocumentation: typeof import('./src/components/icons/IconDocumentation.vue')['default']

@@ -8,7 +8,7 @@ export function useApiClient() {
   if (axiosInstance) return { axiosInstance };
 
   axiosInstance = axios.create({
-    baseURL: import.meta.env.VITE_BOATLY_API_URL,
+    baseURL: import.meta.env.VITE_API_URL,
     headers: {
       Accept: "application/json",
       "X-Timezone": Intl.DateTimeFormat().resolvedOptions().timeZone,
