@@ -28,6 +28,7 @@ Create a `.env.local` file and add your SupaBase keys:
 ```
 VITE_SUPABASE_URL=https://{your supabase project id}.supabase.co
 VITE_SUPABASE_KEY={your supabase project key}
+VITE_API_URL=http://localhost:5274/api/
 ```
 
 ### Compile and Hot-Reload for Development
