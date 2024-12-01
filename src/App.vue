@@ -6,7 +6,6 @@ import SignIn from './pages/auth/signin.vue';
 import AuthenticatedLayout from './components/layouts/AuthenticatedLayout.vue';
 import AnonymousLayout from './components/layouts/AnonymousLayout.vue';
 import { RouterView } from 'vue-router/auto';
-import ConfirmDialog from 'primevue/confirmdialog';
 
 const { session, isLoading } = useSession();
 </script>
@@ -22,8 +21,6 @@ const { session, isLoading } = useSession();
     <AnonymousLayout v-else>
       <SignIn />
     </AnonymousLayout>
-
-    <ConfirmDialog />
 
     <VueQueryDevtools />
   </template>
