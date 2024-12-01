@@ -8,7 +8,11 @@
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "build-only": "vite build",
-    "type-check": "vue-tsc --build"
+    "type-check": "vue-tsc --build",
+    "gen-types": "npx openapi-typescript http://localhost:5274/swagger/v1/swagger.json -o src\\typesschema.d.ts",
+    "nswag-api": "nswag openapi2tsclient /input:http://localhost:5274/swagger/v1/swagger.json /output:./src/api/types.ts /template:Axios /typescriptVersion:4.3 /withCredentials:false /generateOptionalParameters:true /operationGenerationMode:MultipleClientsFromOperationId /typeStyle:Interface  /templateDirectory:./.nswag-templates",
+    "format-api": "prettier -w --loglevel silent ./src/api/types.ts",
+    "gen-api": "npm run nswag-api && npm run format-api"
   },
   "dependencies": {
     "@primevue/themes": "^4.2.4",
@@ -28,7 +32,9 @@
     "@vue/tsconfig": "^0.7.0",
     "autoprefixer": "^10.4.20",
     "npm-run-all2": "^7.0.1",
+    "nswag": "^14.2.0",
     "postcss": "^8.4.49",
+    "swagger-typescript-api": "^13.0.23",
     "tailwindcss": "^3.4.15",
     "typescript": "~5.6.3",
     "unplugin-auto-import": "^0.18.6",
