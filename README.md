@@ -23,7 +23,12 @@ The project has a sign in page and an authenticated home page.
 pnpm install
 ```
 
-Update your environment files
+Create a `.env.local` file and add your SupaBase keys:
+
+```
+VITE_SUPABASE_URL=https://{your supabase project id}.supabase.co
+VITE_SUPABASE_KEY={your supabase project key}
+```
 
 ### Compile and Hot-Reload for Development
 

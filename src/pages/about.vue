@@ -1,15 +1,19 @@
+<script lang="ts" setup>
+import { useRouter } from 'vue-router';
+
+
+const router = useRouter();
+
+const goToHome = () => {
+  router.push('/');
+};
+</script>
+
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="flex flex-col text-center gap-6">
+    <h1 class="text-4xl">About Simple App</h1>
+    <div>
+      <Button label="Back to Home Page" @click="goToHome" />
+    </div>
   </div>
 </template>
-
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>

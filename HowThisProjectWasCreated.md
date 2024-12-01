@@ -69,7 +69,6 @@ Update `tailwind.config.js` to:
 ```
   module.exports = {
   purge: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
-  darkMode: false,
   theme: {
   extend: {},
   },
@@ -202,7 +201,7 @@ Log in to SupaBase and create a new project or open your existing project
 Install the SupaBase client library:
 
 ```
-  npm install @supabase/supabase-js
+  pnpm install @supabase/supabase-js
 ```
 
 Create the following file:
@@ -231,4 +230,4 @@ Create and .env.local file and populate it with:
 
 You can get both of those values from the SupaBase dashboard in your project settings
 
-Create a Login page. Create an `/auth/SignIn.vue` page and paste in the following:
+Create a Login page. Create an `src/pages/auth/SignIn.vue` page and paste in the following:
